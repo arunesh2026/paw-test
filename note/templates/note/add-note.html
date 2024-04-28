@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+<!---->
+
+{% load static %}
+
+<!---->
+
+{% block content %}
+
+<div class="container pt-5">
+    <div class="note_style">css/style.css</div>
+
+    <img src="{% static "images/1.jpg" %}" alt="">
+
+    <!---->
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div>{{ form }}</div>
+
+        <input type="submit" value="Create" />
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+<!---->
+
+{% load static %}
+
+<!---->
+
+{% block css_style_link %} <link rel="stylesheet" href="{% static "note/css/style.css" %}"> {% endblock css_style_link %}
+
+<!---->
+
+{% block content %}
+
+<div class="container">
+    <img src="{% static "note/images/2.jpg" %}" alt="">
+
+    <!---->
+
+    {% for note in notes %}
+    <div class="card m-4 p-2">
+        <h2>{{ note.title }}</h2>
+        <p>{{ note.description }}</p>
+    </div>
+    {% endfor %}
+
+    <div class="note_style">Note/CSS/Style</div>
+</div>
+
+{% endblock content %}
